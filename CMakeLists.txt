@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(ClassFlow VERSION 5.0 LANGUAGES CXX)
+project(ClassFlow VERSION 0.5.0 LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)

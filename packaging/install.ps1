@@ -22,7 +22,7 @@ $app = Join-Path $env:LOCALAPPDATA 'Programs\ClassFlow'
 $exe = Join-Path $app 'ClassFlow.exe'
 
 Write-Host ''
-Write-Host '  ClassFlow 5.0 安装程序' -ForegroundColor Cyan
+Write-Host '  ClassFlow 0.5.0 安装程序' -ForegroundColor Cyan
 Write-Host '  ----------------------------------------' -ForegroundColor DarkGray
 Write-Host ''
 

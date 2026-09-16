@@ -9,6 +9,10 @@ CLAUDE.md
 /.classflow
 /.claude
 
+# 发布产物与仓库备份：release 附件挂在 release 上，不进仓库树
+/ClassFlow-*.zip
+/.git.zip
+
 *result.csv
 
 *~
