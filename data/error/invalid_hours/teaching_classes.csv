@@ -1,0 +1,4 @@
+classId,courseId,courseName,credit,sessionsPerWeek,hoursPerSession,depart,teacherId,plannedSize,maxCapacity,startWeek,endWeek,requiredRoomType
+C101,C01,微积分,4,2,1.5,理学院,T001,40,60,1,16,Any
+C102,C02,英语口语,2,1,0.5,外国语学院,T002,30,40,1,16,Any
+C201,C03,正常对照课,3,2,1,理学院,T003,40,60,1,16,Any

@@ -1,0 +1,9 @@
+classId,courseId,courseName,credit,sessionsPerWeek,hoursPerSession,depart,teacherId,plannedSize,maxCapacity,startWeek,endWeek,requiredRoomType
+C101,C1,课程1,4,8,1,理学院,T001,30,40,1,16,Any
+C201,C2,课程2,4,8,1,理学院,T001,30,40,1,16,Any
+C301,C3,课程3,4,8,1,理学院,T001,30,40,1,16,Any
+C401,C4,课程4,4,8,1,理学院,T001,30,40,1,16,Any
+C501,C5,课程5,4,8,1,理学院,T001,30,40,1,16,Any
+C601,C6,课程6,4,8,1,理学院,T001,30,40,1,16,Any
+C701,C7,课程7,4,8,1,理学院,T001,30,40,1,16,Any
+C801,C8,课程8,4,8,1,理学院,T001,30,40,1,16,Any

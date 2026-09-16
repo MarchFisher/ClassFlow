@@ -1,0 +1,4 @@
+// ClassFlow 应用图标资源（仅 Windows）
+// 由 CMake configure_file 生成到构建目录：@CF_ICON_PATH@ 在配置期注入绝对路径，
+// windres 以此为 exe 嵌入程序图标（资源管理器 / 任务栏 / 快捷方式）。
+1 ICON "@CF_ICON_PATH@"

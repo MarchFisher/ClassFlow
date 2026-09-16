@@ -1,0 +1,264 @@
+/* theme.qss - ClassFlow 全应用样式模板
+   配色变量以 %VAR% 占位，由 ThemeManager 渲染后 setStyleSheet 应用。
+   语义 token：SURFACE 浮起衬底 / ACCENT_TINT 浅衬 / DANGER 错误语义 /
+   TEXT_SECONDARY 次要文字；list/menu 选中用浅衬而非整块实色。
+   完整 token 表见 docs/architecture.md 第 12 节。 */
+
+/* 通用文字色默认前景；不统一给 QWidget 铺底——子控件默认透明，透出所在表面，
+   避免弹窗内每个 QLabel/面板自成一块 %BG% 色块（与 QDialog 的 SURFACE 底不一致）。 */
+QWidget {
+    color: %FG%;
+}
+
+/* ---- 主窗口 / 对话框 / 状态栏 / 菜单栏 ---- */
+/* 主窗口底 = 画布外衬底；弹窗整面 = SURFACE 浮层，内部控件透明透出同底色 */
+QMainWindow {
+    background-color: %BG%;
+}
+QDialog {
+    background-color: %SURFACE%;
+}
+QStatusBar {
+    background-color: %HEAD_BG%;
+    color: %HEAD_FG%;
+}
+QMenuBar {
+    background-color: %HEAD_BG%;
+    color: %FG%;
+}
+QMenuBar::item:selected {
+    background-color: %ACCENT_TINT%;
+    color: %FG%;
+}
+
+/* ---- 主操作按钮（自动排课 / 空态 CTA）：accent 实底 ---- */
+QPushButton[primary="true"] {
+    background-color: %PRIMARY_BG%;
+    color: %PRIMARY_FG%;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    padding: 8px 18px;
+}
+QPushButton[primary="true"]:hover {
+    background-color: %PRIMARY_HOVER%;
+}
+QPushButton[primary="true"]:pressed {
+    background-color: %ACCENT_PRESSED%;
+}
+QPushButton[primary="true"]:disabled {
+    background-color: %DISABLED_BG%;
+    color: %DISABLED_FG%;
+}
+
+/* ---- 普通按钮 ---- */
+QPushButton {
+    background-color: %BTN_BG%;
+    color: %BTN_FG%;
+    border: 1px solid %BORDER%;
+    border-radius: 6px;
+    padding: 6px 14px;
+}
+QPushButton:hover {
+    background-color: %BTN_HOVER%;
+}
+QPushButton:pressed {
+    background-color: %BTN_PRESSED%;
+}
+QPushButton:disabled {
+    background-color: %DISABLED_BG%;
+    color: %DISABLED_FG%;
+}
+/* :focus 焦点环（accent 描边），与被选中项同源可感知 */
+QPushButton:focus {
+    border: 1px solid %ACCENT%;
+}
+/* danger 态按钮：排课失败>0 时的「排课错误」入口（危险而非强调） */
+QPushButton[danger="true"] {
+    background-color: %DANGER_TINT%;
+    color: %DANGER%;
+    border: 1px solid %DANGER%;
+    font-weight: bold;
+}
+QPushButton[danger="true"]:hover {
+    background-color: %DANGER_TINT%;
+}
+QPushButton[danger="true"]:disabled {
+    background-color: %DISABLED_BG%;
+    color: %DISABLED_FG%;
+    border-color: %BORDER%;
+    font-weight: normal;
+}
+/* active 态按钮：筛选生效中（accent 浅衬 + 描边 + accent 文字，非实底主操作） */
+QPushButton[active="true"] {
+    background-color: %ACCENT_TINT%;
+    color: %ACCENT%;
+    border: 1px solid %ACCENT%;
+    font-weight: bold;
+}
+QPushButton[active="true"]:hover {
+    background-color: %ACCENT_TINT%;
+}
+/* 纯图标按钮（如课程详情标题行三钮）：去文本内边距、扁平透明，悬停显浅衬 */
+QPushButton[flat="true"] {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+QPushButton[flat="true"]:hover {
+    background-color: %ACCENT_TINT%;
+}
+QPushButton[flat="true"]:pressed {
+    background-color: %ACCENT_TINT%;
+}
+QPushButton[flat="true"]:focus {
+    border: 1px solid %ACCENT%;
+    background: transparent;
+}
+
+/* ---- 输入框 / 下拉框 / 数值框 ---- */
+QLineEdit, QComboBox, QSpinBox {
+    background-color: %INPUT_BG%;
+    color: %INPUT_FG%;
+    border: 1px solid %BORDER%;
+    border-radius: 4px;
+    padding: 4px 8px;
+    selection-background-color: %ACCENT%;
+    selection-color: %ACCENT_FG%;
+}
+QLineEdit:focus, QComboBox:focus, QSpinBox:focus {
+    border: 1px solid %ACCENT%;
+}
+QSpinBox::up-button, QSpinBox::down-button {
+    width: 16px;
+}
+
+/* ---- 列表 / 下拉弹出列表：选中改浅衬，不用整块实色 ---- */
+QListWidget, QListView {
+    background-color: %INPUT_BG%;
+    color: %INPUT_FG%;
+    border: 1px solid %BORDER%;
+    border-radius: 4px;
+}
+QListWidget::item, QListView::item {
+    border-radius: 4px;
+    padding: 3px 6px;
+}
+QListWidget::item:selected, QListView::item:selected {
+    background-color: %ACCENT_TINT%;
+    color: %FG%;
+}
+QComboBox QAbstractItemView {
+    background-color: %INPUT_BG%;
+    color: %INPUT_FG%;
+    border: 1px solid %BORDER%;
+}
+QComboBox QAbstractItemView::item {
+    padding: 4px 8px;
+}
+QComboBox QAbstractItemView::item:selected {
+    background-color: %ACCENT_TINT%;
+    color: %FG%;
+}
+
+/* ---- 课表网格画布：底用 SURFACE、表头与正文分层（画布感） ---- */
+QTableView {
+    background-color: %SURFACE%;
+    color: %FG%;
+    alternate-background-color: %ALT_BG%;
+    gridline-color: %BORDER%;
+    border: none;
+    selection-background-color: %ACCENT_TINT%;
+    selection-color: %FG%;
+}
+QHeaderView::section {
+    background-color: %HEAD_BG%;
+    color: %HEAD_FG%;
+    border: none;
+    border-right: 1px solid %BORDER%;
+    border-bottom: 1px solid %BORDER%;
+    padding: 4px 6px;
+}
+/* 表头交角小方块（课表左上角）：必须同时给 border 背景才生效；
+   与表头同底同分隔线，避免亮色下孤零零一块突兀色 */
+QTableCornerButton::section {
+    background-color: %HEAD_BG%;
+    border: none;
+    border-right: 1px solid %BORDER%;
+    border-bottom: 1px solid %BORDER%;
+}
+QTableView::item:selected {
+    background-color: %ACCENT_TINT%;
+    color: %FG%;
+}
+/* 空态引导页与课表网格同处 SURFACE 画布层，切换时背景不跳色 */
+EmptyState {
+    background-color: %SURFACE%;
+}
+
+/* ---- 弹出菜单 ---- */
+QMenu {
+    background-color: %SURFACE%;
+    color: %FG%;
+    border: 1px solid %BORDER%;
+    padding: 4px;
+}
+QMenu::item {
+    padding: 6px 24px;
+    border-radius: 4px;
+}
+QMenu::item:selected {
+    background-color: %ACCENT_TINT%;
+    color: %FG%;
+}
+QMenu::item:checked {
+    font-weight: bold;
+}
+QMenu::separator {
+    background-color: %BORDER%;
+    height: 1px;
+    margin: 4px 8px;
+}
+
+/* ---- 滚动条 ---- */
+QScrollBar:vertical {
+    background: %SCROLL_BG%;
+    width: 12px;
+    margin: 0;
+}
+QScrollBar::handle:vertical {
+    background: %SCROLL_HANDLE%;
+    min-height: 24px;
+    border-radius: 5px;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
+QScrollBar:horizontal {
+    background: %SCROLL_BG%;
+    height: 12px;
+    margin: 0;
+}
+QScrollBar::handle:horizontal {
+    background: %SCROLL_HANDLE%;
+    min-width: 24px;
+    border-radius: 5px;
+}
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0;
+}
+
+/* ---- 工具提示 ---- */
+QToolTip {
+    background-color: %TOOLTIP_BG%;
+    color: %TOOLTIP_FG%;
+    border: 1px solid %BORDER%;
+    padding: 3px 6px;
+}
+
+/* ---- 次要文字：侧栏小节标题 / 分组标签（随主题） ---- */
+QLabel[secondary="true"] {
+    color: %TEXT_SECONDARY%;
+    font-size: 11px;
+    font-weight: bold;
+}

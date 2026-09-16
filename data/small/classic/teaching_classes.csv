@@ -1,0 +1,12 @@
+classId,courseId,courseName,credit,sessionsPerWeek,hoursPerSession,depart,teacherId,plannedSize,maxCapacity,startWeek,endWeek,requiredRoomType
+C101,C01,高等数学,4,2,2,理学院,T001,120,150,1,16,Norm
+C102,C01,高等数学,4,2,2,理学院,T001,110,150,1,16,Norm
+C103,C01,高等数学,4,2,2,理学院,T002,100,150,1,16,Norm
+C201,C02,大学物理,3,2,2,理学院,T002,90,120,1,8,Norm
+C202,C02,大学物理,3,2,2,理学院,T003,85,120,1,8,Norm
+C301,C03,程序设计基础,3,3,2,计算机学院,T004,28,100,9,16,Lab
+C401,C04,大学英语,2,2,1,外国语学院,T005,130,160,9,16,Norm
+C402,C04,大学英语,2,2,1,外国语学院,T005,125,160,9,16,Norm
+C211,C05,大学物理实验,2,1,3,理学院,T002,22,100,1,8,Lab
+D101,D01,体育,0.5,1,2,体育系,T101,30,30,1,16,PlayGround
+D102,D01,体育,0.5,1,2,体育系,T102,30,30,1,16,PlayGround

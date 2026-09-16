@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RCC>
+    <qresource prefix="/theme/icons">
+        <file>save.svg</file>
+        <file>rotate-ccw.svg</file>
+        <file>rotate-cw.svg</file>
+        <file>lock.svg</file>
+        <file>unlock.svg</file>
+        <file>edit-2.svg</file>
+        <file>trash-2.svg</file>
+        <file alias="app.png">classflow.png</file>
+    </qresource>
+</RCC>

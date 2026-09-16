@@ -1,0 +1,24 @@
+roomNumber,capacity,type
+A101,60,Norm
+A102,60,Norm
+A201,45,Norm
+A202,45,Norm
+B101,30,Norm
+B201,30,Norm
+J1-101,100,Norm
+J1-102, 100, Norm
+J2-101, 100, Norm
+J2-102, 100, Norm
+J3-102, 100, Norm
+J4-101, 100, Norm
+J4-102, 100, Norm
+J5-101, 100, Norm
+J1-404, 200, Norm
+J2-404, 200, Norm
+J3-404, 200, Norm
+J4-404, 200, Norm
+J5-404, 200, Norm
+J6-404, 200, Norm
+Lab1,30,Lab
+Lab2,24,Lab
+Play1,200,PlayGround

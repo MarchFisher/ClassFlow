@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ImportDialog</class>
+ <widget class="QDialog" name="ImportDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>360</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>导入数据</string>
+  </property>
+  <!-- 本文件只定义窗口与标题；三个文件选择行、预览表格、确定/取消按钮
+       均在 ImportDialog 构造函数里用代码搭建（见 importdialog.cpp）。 -->
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

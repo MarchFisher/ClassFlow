@@ -1,0 +1,2 @@
+classId,courseId,courseName,credit,sessionsPerWeek,hoursPerSession,depart,teacherId,plannedSize,maxCapacity,startWeek,endWeek,requiredRoomType
+C101,C01,超学期课,3,2,2,理学院,T001,40,60,0,30,Any

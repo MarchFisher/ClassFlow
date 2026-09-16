@@ -1,0 +1,3 @@
+classId,courseId,courseName,credit,sessionsPerWeek,hoursPerSession,depart,teacherId,plannedSize,maxCapacity,startWeek,endWeek,requiredRoomType
+C101,C01,千人合班课,4,2,2,理学院,T001,1000,1200,1,16,Any
+C201,C02,普通班对照,2,2,2,理学院,T002,40,60,1,16,Any
